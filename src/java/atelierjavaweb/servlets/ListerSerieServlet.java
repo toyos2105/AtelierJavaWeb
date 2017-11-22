@@ -5,24 +5,25 @@
  */
 package atelierjavaweb.servlets;
 
-import atelierjavaweb.entity.Film;
+import atelierjavaweb.entity.Serie;
 import java.io.IOException;
 import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
+
 /**
  *
  * @author Formation
  */
-@WebServlet(name = "ListerFilmServlet", urlPatterns = {"/lister_films"})
-public class ListerFilmServlet extends HttpServlet {
+@WebServlet(name = "ListerSerieServlet", urlPatterns = {"/lister_series"})
+public class ListerSerieServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -32,11 +33,11 @@ public class ListerFilmServlet extends HttpServlet {
         
         em.getTransaction().begin();
         
-        Query query = em.createQuery("SELECT f FROM Film f");
-        List<Film> listeDesFilms = (List<Film>) query.getResultList();
+        Query query = em.createQuery("SELECT s FROM Serie s");
+        List<Serie> listeDesSeries = (List<Serie>) query.getResultList();
         
-        req.setAttribute("films", listeDesFilms);
-        req.getRequestDispatcher("liste_films.jsp").forward(req, resp);
+        req.setAttribute("series", listeDesSeries);
+        req.getRequestDispatcher("liste_series.jsp").forward(req, resp);
         
     }
     

@@ -16,8 +16,8 @@
     <body>
         <c:import url="header.jsp"/>
         
-        <c:forEach items="${films}" var="film">
-            ${film.titre}<br>
+        <c:forEach items="${series}" var="serie">
+            ${serie.titre}<br>
         </c:forEach>
         <table>
             
