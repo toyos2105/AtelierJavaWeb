@@ -11,12 +11,18 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <link href="style.css" rel='stylesheet'/>
     </head>
     <body>
-        <h1>Liste des films</h1>
-        ${test}
+        <c:import url="header.jsp"/>
+        
         <c:forEach items="${films}" var="film">
             ${film.titre}<br/>
         </c:forEach>
+        <table>
+            
+            
+        </table>    
+        <c:import url="footer.jsp"/>   
     </body>
 </html>
