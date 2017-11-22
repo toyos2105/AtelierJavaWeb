@@ -16,7 +16,7 @@
         <h1>Liste des films</h1>
         ${test}
         <c:forEach items="${films}" var="film">
-            ${film.titre}
+            ${film.titre}<br/>
         </c:forEach>
     </body>
 </html>

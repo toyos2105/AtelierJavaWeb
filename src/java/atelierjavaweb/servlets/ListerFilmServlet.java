@@ -34,11 +34,9 @@ public class ListerFilmServlet extends HttpServlet {
         em.getTransaction().begin();
         
         Query query = em.createQuery("SELECT f FROM Film f");
-        List<Film> films = (List<Film>) query.getSingleResult();
+        List<Film> films = (List<Film>) query.getResultList();
         
-        String message ="C'est mon message";
-        
-        req.setAttribute("test", message);
+        req.setAttribute("films", films);
         req.getRequestDispatcher("liste_films.jsp").forward(req, resp);
         
     }
