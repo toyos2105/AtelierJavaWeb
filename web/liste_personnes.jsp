@@ -16,29 +16,28 @@
     </head>
     <body>
         <c:import url="header.jsp"/>
-        
         <corps>
             <div class="table-title">
-                <h3>Table des séries</h3>
+                <h3>Table des personnes</h3>
             </div>
-
             <table class="table-fill">
                 <thead>
                     <tr>
-                        <th class="text-left">Titre</th>
-                        <th class="text-left">Titre</th>
+                        <th class="text-left">Nom</th>
+                        <th class="text-left">Prénom</th>
                     </tr>
                 </thead>
                 <tbody class="table-hover">
-                    <c:forEach items="${series}" var="serie">
+                    <c:forEach items="${personnes}" var="personne">
                         <tr>
-                            <td class="text-left">${serie.titre}</td>
-                            <td class="text-left">${serie.titre}</td>
+                            <td class="text-left">${personne.nom}</td>
+                            <td class="text-left">${personne.prenom}</td>
                         </tr>
                     </c:forEach>
 
                 </tbody>
-            </table>  
+            </table>
+            <br>
         </corps>
         <c:import url="footer.jsp"/>   
     </body>
