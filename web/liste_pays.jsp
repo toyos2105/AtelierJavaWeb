@@ -1,5 +1,5 @@
 <%-- 
-    Document   : liste_films
+    Document   : liste_series
     Created on : 22 nov. 2017, 12:07:20
     Author     : Formation
 --%>
@@ -16,30 +16,28 @@
     </head>
     <body>
         <c:import url="header.jsp"/>
+        
         <corps>
             <div class="table-title">
-                <h3>Table des films</h3>
+                <h3>Table des pays</h3>
             </div>
+
             <table class="table-fill">
                 <thead>
                     <tr>
-                        <th class="text-left">Titre</th>
-                        <th class="text-left">Année de sortie</th>
+                        <th class="text-left">Pays</th>
                     </tr>
                 </thead>
                 <tbody class="table-hover">
-                    <c:forEach items="${films}" var="film">
+                    <c:forEach items="${pays}" var="pays1">
                         <tr>
-                            <td class="text-left">${film.titre}</td>
-                            <td class="text-left">${film.annee}</td>
+                            <td class="text-left">${pays1.nom}</td>
                         </tr>
                     </c:forEach>
 
                 </tbody>
-            </table>
-            <br>  
+            </table>  
         </corps>
-       
         <c:import url="footer.jsp"/>   
     </body>
 </html>
