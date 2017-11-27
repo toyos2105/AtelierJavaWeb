@@ -40,6 +40,17 @@
                             <td class="text-left"><input type="number" min="1" name="duree"></td>
                         </tr>
                         <tr>
+                            <td class="text-left">Genre</td>
+                            <td class="text-left">
+                                <select name="genre_id">
+                                    <c:forEach items="${genres}" var="genre">
+                                        <option value="${genre.id}">${genre.nom}</option>
+                                    </c:forEach>
+                                    
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
                             <td class="text-left"></td>
                             <td class="text-left"><input type="submit" value="Enregistrer"></td>
                         </tr>
