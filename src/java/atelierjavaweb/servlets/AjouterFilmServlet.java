@@ -64,10 +64,5 @@ public class AjouterFilmServlet extends HttpServlet {
         em.persist(f);
         em.getTransaction().commit();
         resp.sendRedirect("lister_films");
-        
     }
-    
-    
-  
-
 }

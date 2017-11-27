@@ -141,7 +141,7 @@ li a:hover {
 
 header {
     position: fixed;
-    height:35px;
+    height:45px;
     top: 0;
     width: 100%;
     background-color: #333;
@@ -164,7 +164,7 @@ footer {
 
 corps{
     position:absolute; 
-    top:35px; 
+    top:45px; 
     bottom:35px; 
     left:0px; 
     right:0px; 
@@ -236,7 +236,7 @@ tr {
   font-weight:normal;
   text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
 }
- 
+
 tr:hover td {
   background:#4E5066;
   color:#FFFFFF;

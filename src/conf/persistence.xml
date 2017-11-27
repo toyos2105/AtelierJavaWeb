@@ -11,6 +11,7 @@
     <class>atelierjavaweb.entity.Personne</class>
     <class>atelierjavaweb.entity.Saison</class>
     <class>atelierjavaweb.entity.Serie</class>
+    <class>atelierjavaweb.entity.Utilisateur</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/AtelierJPA"/>
